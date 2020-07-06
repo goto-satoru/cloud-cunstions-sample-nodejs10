@@ -2,7 +2,7 @@
 
 forked from https://github.com/GoogleCloudPlatform/nodejs-docs-samples.git
 
-## reference document: https://cloud.google.com/scheduler/docs/start-and-stop-compute-engine-instances-on-a-schedule
+reference document: https://cloud.google.com/scheduler/docs/start-and-stop-compute-engine-instances-on-a-schedule
 
 ## create Pub/Sub topics
 
