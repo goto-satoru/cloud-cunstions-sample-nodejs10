@@ -10,9 +10,9 @@ exports.stopInstancePubSub = async (event, context, callback) => {
     const [vms] = await compute.getVMs(options);
     await Promise.all(
       vms.map(async (instance) => {
-        console.log(instance);
         if (payload.zone === instance.zone.id) {
-          console.log(instance);
+          console.log('zone: ' + instance.zone.id);
+          console.log('instance:' + instance.name);
           const [operation] = await compute
             .zone(payload.zone)
             .vm(instance.name)
@@ -27,7 +27,7 @@ exports.stopInstancePubSub = async (event, context, callback) => {
     );
 
     // Operation complete. Instance successfully stopped.
-    const message = `Successfully stopped instance(s)`;
+    const message = 'Successfully stopped instance(s)';
     console.log(message);
     callback(null, message);
   } catch (err) {
