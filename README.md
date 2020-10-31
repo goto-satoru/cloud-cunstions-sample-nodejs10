@@ -27,8 +27,8 @@ gcloud functions list
 stop all GCE instances in asia-northeast1-a, asia-northeast1-b and asia-northeast1-c regions which have env=test label.
 
 ```
-gcloud beta scheduler jobs create pubsub stop-instances --schedule '0 23 * * *' --topic stop-instance-event --message-body '{"zone":"asia-northeast1-a", "label":"env=test"}' --time-zone 'Asia/Tokyo'
-gcloud beta scheduler jobs create pubsub stop-instances --schedule '0 23 * * *' --topic stop-instance-event --message-body '{"zone":"asia-northeast1-b", "label":"env=test"}' --time-zone 'Asia/Tokyo'
-gcloud beta scheduler jobs create pubsub stop-instances --schedule '0 23 * * *' --topic stop-instance-event --message-body '{"zone":"asia-northeast1-c", "label":"env=test"}' --time-zone 'Asia/Tokyo'
+gcloud beta scheduler jobs create pubsub stop-instances-a --schedule '0 23 * * *' --topic stop-instance-event --message-body '{"zone":"asia-northeast1-a", "label":"env=test"}' --time-zone 'Asia/Tokyo'
+gcloud beta scheduler jobs create pubsub stop-instances-b --schedule '0 23 * * *' --topic stop-instance-event --message-body '{"zone":"asia-northeast1-b", "label":"env=test"}' --time-zone 'Asia/Tokyo'
+gcloud beta scheduler jobs create pubsub stop-instances-c --schedule '0 23 * * *' --topic stop-instance-event --message-body '{"zone":"asia-northeast1-c", "label":"env=test"}' --time-zone 'Asia/Tokyo'
 gcloud beta scheduler jobs list
 ```
