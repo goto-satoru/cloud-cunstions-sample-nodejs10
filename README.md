@@ -13,7 +13,7 @@ gcloud pubsub topics list
 
 ## deploy function
 
-Do not use Node.js 8 run time
+Do NOT use Node.js 8 run time
 
 ```
 git clone https://github.com/goto-satoru/cloud-functions-sample-nodejs10.git
