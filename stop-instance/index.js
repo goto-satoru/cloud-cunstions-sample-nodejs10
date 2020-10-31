@@ -11,8 +11,8 @@ exports.stopInstancePubSub = async (event, context, callback) => {
     await Promise.all(
       vms.map(async (instance) => {
         if (payload.zone === instance.zone.id) {
-          console.log('zone: ' + instance.zone.id);
-          console.log('instance:' + instance.name);
+          console.log('Zone: ' + instance.zone.id);
+          console.log('Instance: ' + instance.name);
           const [operation] = await compute
             .zone(payload.zone)
             .vm(instance.name)
