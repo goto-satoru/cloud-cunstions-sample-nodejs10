@@ -12,6 +12,8 @@ exports.startInstancePubSub = async (event, context, callback) => {
       vms.map(async (instance) => {
         console.log(instance);
         if (payload.zone === instance.zone.id) {
+          console.log('Zone: ' + instance.zone.id);
+          console.log('Instance: ' + instance.name);
           const [operation] = await compute
             .zone(payload.zone)
             .vm(instance.name)
@@ -19,6 +21,8 @@ exports.startInstancePubSub = async (event, context, callback) => {
 
           // Operation pending
           return operation.promise();
+        } else {
+          return Promise.resolve();
         }
       })
     );
