@@ -28,7 +28,7 @@ exports.startInstancePubSub = async (event, context, callback) => {
     );
 
     // Operation complete. Instance successfully started.
-    const message = `Successfully started instance(s)`;
+    const message = 'Successfully started instance(s)';
     console.log(message);
     callback(null, message);
   } catch (err) {
