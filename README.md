@@ -1,4 +1,4 @@
-# Google Cloud Functions - stop GCE instances sample
+# Google Cloud Functions - start/stop GCE instances sample
 
 forked from https://github.com/GoogleCloudPlatform/nodejs-docs-samples.git
 
